@@ -1,35 +1,25 @@
 # Game Systems Design Showcase
 
-A curated portfolio repository focused on gameplay systems, systems design, technical design, balancing, progression, economy design, and UI/UX flows.
+A curated portfolio repository focused on **game systems design**, **technical design**, **combat systems**, **progression**, **economy balancing**, **puzzle flow**, and **implementation-ready documentation**.
 
-This repository is designed to support my profile as a **Technical Game Designer / Systems Designer** with hands-on implementation experience across Unreal Engine, Roblox, and front-end tools.
-
----
-
-## About This Repository
-
-This is not a single game project.  
-It is a professional showcase of how I think, design, break down, balance, and implement game systems.
-
-It includes selected design breakdowns from multiple projects:
-
-- **LostPulse** — 2D roguelite platformer systems
-- **BeatTheBlock** — mobile puzzle systems and combo logic
-- **Roblox Zombie Tycoon** — tycoon economy, raids, automation, and retention systems
-- **DeadlyCuriosity** — first-person puzzle / escape-room objective and interaction systems
+This repository supports my profile as a **Technical Game Designer / Systems Designer** with hands-on implementation experience across **Unreal Engine**, **C++**, **Roblox/Lua**, and production-style frontend tools.
 
 ---
 
-## Focus Areas
+## Overview
 
-- Gameplay Systems Design
-- Combat and Progression Systems
-- Economy and Reward Balancing
-- Puzzle and Objective Flow
-- UI/UX System Design
-- Technical Design Documentation
-- Player Progression and Retention Loops
-- Implementation-Oriented Design
+This is not a single game project.
+
+It is a focused design portfolio that shows how I break down gameplay systems, structure rules, define progression, document balancing logic, and translate design intent into implementation-ready technical specifications.
+
+The goal is to demonstrate how I think as a designer who can connect:
+
+- Player experience
+- Core loops
+- System rules
+- Balancing logic
+- UI/UX feedback
+- Technical implementation constraints
 
 ---
 
@@ -37,56 +27,106 @@ It includes selected design breakdowns from multiple projects:
 
 | Case Study | Focus Area | Project Type |
 |---|---|---|
-| [LostPulse Combat & Progression](docs/lostpulse-combat-progression.md) | Combat, roguelite progression, relics, upgrades | Unreal Engine / C++ |
-| [BeatTheBlock Match-3 Systems](docs/beattheblock-match3-systems.md) | Puzzle logic, combo systems, mobile UX | Unreal Engine / C++ |
-| [Roblox Zombie Tycoon Economy](docs/roblox-zombie-tycoon-economy.md) | Economy, automation, raids, rebirths | Roblox / Lua |
-| [DeadlyCuriosity Objective System](docs/deadlycuriosity-objective-system.md) | Puzzle flow, objectives, interaction design | Unreal Engine / C++ |
+| [LostPulse — Combat & Progression](docs/lostpulse-combat-progression.md) | Combat design, roguelite progression, relics, skills, meta upgrades | Unreal Engine / C++ |
+| [BeatTheBlock — Match-3 Systems](docs/beattheblock-match3-systems.md) | Puzzle logic, special pieces, combo rules, mobile UX feedback | Unreal Engine / C++ |
+| [Roblox Zombie Tycoon — Economy & Raids](docs/roblox-zombie-tycoon-economy.md) | Tycoon economy, automation, raid rules, rebirth progression, retention | Roblox / Lua |
+| [DeadlyCuriosity — Objective & Puzzle Flow](docs/deadlycuriosity-objective-system.md) | Interaction systems, notebook objectives, puzzle dependencies, room flow | Unreal Engine / C++ |
+
+---
+
+## Focus Areas
+
+- Gameplay Systems Design
+- Technical Game Design
+- Combat and Progression Systems
+- Economy and Reward Balancing
+- Puzzle and Objective Flow
+- UI/UX System Design
+- Player Feedback Design
+- Retention and Progression Loops
+- Implementation-Oriented Documentation
 
 ---
 
 ## Design Methodology
 
-My approach to systems design usually follows this structure:
+My systems design process usually follows this structure:
 
-1. **Define the player fantasy**
-   - What should the player feel?
-   - What is the core loop?
-   - What makes the system worth repeating?
+### 1. Define the Player Fantasy
 
-2. **Break the system into rules**
-   - Inputs
-   - Outputs
-   - Constraints
-   - Failure states
-   - Success states
+Before designing rules, I define what the player should feel.
 
-3. **Build a scalable structure**
-   - Data-driven values where possible
-   - Clear separation between logic, UI, and feedback
-   - Systems that can be expanded without rewriting the foundation
+Examples:
 
-4. **Balance for progression**
-   - Early-game clarity
-   - Mid-game escalation
-   - Late-game challenge and optimization
-   - Avoiding runaway power unless it supports the fantasy
+- Powerful but vulnerable
+- Clever for solving a puzzle
+- Rewarded for optimizing a build
+- Pressured by enemy placement
+- Motivated to return after a run or session
 
-5. **Translate design into implementation**
-   - Technical requirements
-   - Component/module responsibilities
-   - UI states
-   - Debugging and iteration needs
+### 2. Define the Core Loop
+
+Every system needs a repeatable loop.
+
+Example:
+
+```txt
+Action
+→ Feedback
+→ Reward
+→ Decision
+→ Escalation
+→ Repeat
+```
+
+### 3. Break the System into Rules
+
+I document the system as clear rules:
+
+- Inputs
+- Outputs
+- Constraints
+- Success states
+- Failure states
+- Edge cases
+- Scaling behavior
+
+### 4. Balance for Progression
+
+Balancing is not only numbers.  
+It is the relationship between pressure, reward, player power, learning, and pacing.
+
+Important questions:
+
+- What does the player understand in the first 5 minutes?
+- When does the system start creating depth?
+- What prevents one strategy from dominating?
+- How does the system scale into mid-game and late-game?
+- What feedback tells the player they made progress?
+
+### 5. Translate Design into Implementation
+
+Each case study is written to be useful for actual development.
+
+That means documenting:
+
+- Component responsibilities
+- Data-driven values
+- UI states
+- Player feedback requirements
+- Debugging needs
+- Expansion points
 
 ---
 
-## Example System Breakdown Format
+## Case Study Format
 
-Each case study follows a consistent structure:
+Each breakdown follows a consistent structure:
 
 ```txt
 1. Project Context
 2. Design Goal
-3. Core Loop
+3. Core Player Loop
 4. System Rules
 5. Player Feedback
 6. Balancing Notes
@@ -94,14 +134,80 @@ Each case study follows a consistent structure:
 8. Portfolio Value
 ```
 
+This format makes each system easier to evaluate from both a design and development perspective.
+
+---
+
+## Projects Covered
+
+### LostPulse
+
+A 2D roguelite platformer focused on movement, combat timing, relics, active skills, permanent upgrades, enemy pressure, and run-based progression.
+
+Key systems:
+
+- Light / heavy / charge / air attacks
+- Startup / active / recovery timing
+- Relic-driven build variety
+- Meta progression
+- Safehouse upgrades
+- Currency and reward loops
+
+### BeatTheBlock
+
+A mobile puzzle project focused on board logic, match detection, special pieces, combo resolution, and readable touch-first UI feedback.
+
+Key systems:
+
+- Match-3 board logic
+- Rocket / bomb / color bomb specials
+- Combo rules
+- Dead-board detection
+- Reshuffle logic
+- Floating score and combo feedback
+
+### Roblox Zombie Tycoon
+
+A Roblox tycoon concept focused on machine progression, automation, raids, rebirths, daily rewards, and long-term retention.
+
+Key systems:
+
+- Machine unlock pipeline
+- Worker automation
+- Raid risk/reward rules
+- Rebirth progression
+- Daily and playtime rewards
+- Leaderboards and social status systems
+
+### DeadlyCuriosity
+
+A first-person puzzle / escape-room style project focused on interaction flow, objective tracking, notebook updates, and puzzle dependency chains.
+
+Key systems:
+
+- Interactable objects
+- Line trace interaction
+- Prompt UI
+- Notebook objective tracking
+- Code panels
+- Room-based puzzle progression
+
 ---
 
 ## Portfolio Value
 
-This repository demonstrates that I can work beyond high-level ideas.  
-It shows how I structure systems, document implementation-ready rules, think about balancing, and connect design intent with technical execution.
+This repository demonstrates my ability to work beyond high-level design ideas.
 
-It is intended for roles such as:
+It shows how I:
+
+- Structure gameplay systems
+- Document implementation-ready rules
+- Think about balance and progression
+- Connect UX feedback with gameplay rules
+- Design systems that can scale
+- Communicate clearly with developers and teams
+
+This repository is relevant for roles such as:
 
 - Game Designer
 - Technical Game Designer
@@ -109,6 +215,18 @@ It is intended for roles such as:
 - Gameplay Designer
 - Level Designer
 - Economy Designer
+- Technical Designer
+
+---
+
+## Related Portfolio Projects
+
+| Project | Type | Status |
+|---|---|---|
+| ResumePilot | Resume Builder SaaS frontend | Live demo available |
+| NexaDash | SaaS admin dashboard | Live demo available |
+| SET Store | E-commerce marketplace frontend | Live demo available |
+| StudioTrack | Game production tracker | Frontend demo live, backend-ready repo |
 
 ---
 
@@ -122,7 +240,36 @@ It is intended for roles such as:
 
 ## Current Scope
 
-This repository contains design documentation and system breakdowns.  
-It does not include full source code for all referenced projects because some projects are private, in development, or contain production-specific files.
+This repository contains design documentation and system breakdowns.
 
-The purpose of this repository is to present **design thinking, system architecture, balancing logic, and technical design clarity**.
+It does not include full production source code for all referenced projects because some projects are private, in development, or contain production-specific files.
+
+The purpose of this repository is to present:
+
+- Design thinking
+- System architecture
+- Balancing logic
+- Gameplay structure
+- Technical design clarity
+- Implementation-ready documentation
+
+---
+
+## Repository Structure
+
+```txt
+game-systems-design-showcase/
+├── README.md
+├── docs/
+│   ├── lostpulse-combat-progression.md
+│   ├── beattheblock-match3-systems.md
+│   ├── roblox-zombie-tycoon-economy.md
+│   └── deadlycuriosity-objective-system.md
+└── LICENSE
+```
+
+---
+
+## License
+
+This repository is intended as a professional portfolio and design documentation showcase.
